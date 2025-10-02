@@ -1,1 +1,13 @@
-<p>header works!</p>
+<header>
+  <a routerLink="/">
+    <img class="logo_principal" src="imagens/logo_imagem.png" alt="Logo do consultório"/></a>
+
+  <nav>
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/sobre" routerLinkActive="active-link">Sobre Mim</a></li>
+      <li><a routerLink="/faq" routerLinkActive="active-link">FAQ</a></li>
+      <li><a routerLink="/consultas" routerLinkActive="active-link">Consultas</a></li>
+    </ul>
+  </nav>
+</header>
