@@ -1,33 +1,37 @@
-/* Container principal que ocupa a tela inteira */
+/* Container principal com o novo fundo azul escuro */
 .container-login {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f4ff;
+    /* Fundo gradiente azul escuro para um visual mais sofisticado */
+    background: linear-gradient(135deg, #171b62 0%, #240451 100%);
     padding: 20px;
+    font-family: 'Montserrat', sans-serif; /* Usando uma fonte mais moderna */
   }
   
-  /* A "caixa" branca do formulário */
+  /* A "caixa" do formulário com leve transparência */
   .caixa-login {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.98); /* Fundo branco levemente transparente */
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 450px;
+    max-width: 480px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   /* Cabeçalho dentro da caixa */
   .cabecalho-login {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
   
   .cabecalho-login h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-family: 'Playfair Display', serif; /* Fonte elegante para o título */
     color: #1e293b;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   
   .cabecalho-login p {
@@ -37,7 +41,7 @@
   
   /* Grupo de formulário (label + input) */
   .grupo-formulario {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
   
   .grupo-formulario label {
@@ -50,7 +54,7 @@
   
   .grupo-formulario input {
     width: 100%;
-    padding: 12px 15px;
+    padding: 14px 18px;
     font-size: 1rem;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
@@ -60,18 +64,20 @@
   .grupo-formulario input:focus {
     outline: none;
     border-color: #5a67d8;
-    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+    box-shadow: 0 0 0 4px rgba(90, 103, 216, 0.25);
   }
   
+  /* Opções do formulário (link "Esqueci minha senha") */
   .opcoes-formulario {
     text-align: right;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   
   .esqueci-senha {
     font-size: 0.9rem;
     color: #5a67d8;
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.3s;
   }
   
@@ -80,31 +86,30 @@
     color: #434190;
   }
   
-  
+  /* Botão principal de login */
   .botao-login {
     width: 100%;
-    padding: 15px;
-    font-size: 1rem;
+    padding: 16px;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #ffffff;
     background-color: #5a67d8;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(90, 103, 216, 0.4);
+    transition: all 0.3s ease;
   }
   
   .botao-login:hover {
     background-color: #434190;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(90, 103, 216, 0.5);
   }
   
-  @media (max-width: 480px) {
+  /* Responsividade */
+  @media (max-width: 520px) {
     .caixa-login {
       padding: 30px;
-    }
-  
-    .cabecalho-login h2 {
-      font-size: 1.8rem;
     }
   }

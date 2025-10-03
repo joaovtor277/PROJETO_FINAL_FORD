@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from "../agendamento/login/login.component";
+import { LoginComponent } from "../../features/agendamento/components/login/login.component";
 
 @Component({
   selector: 'app-consultas',
