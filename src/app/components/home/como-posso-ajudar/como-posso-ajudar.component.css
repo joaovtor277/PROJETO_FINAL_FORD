@@ -1,0 +1,108 @@
+:host {
+  display: block;
+  background-color: #ffffff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.container {
+  background-color: #f1f2f6; 
+  border-radius: 30px;
+  padding: 60px 40px; 
+  max-width: 1200px;
+}
+
+
+.secao-cabecalho {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.secao-cabecalho h2 {
+  color: #120853; 
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+.secao-cabecalho p {
+  color: #120853;
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+
+.servicos-grid {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center; 
+  gap: 40px; 
+}
+
+.servico-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servico-icone {
+  width: 200px; 
+  height: 200px; 
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-icone:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.servico-icone img {
+  max-width: 120px; 
+  height: auto;
+}
+
+.servico-item h3 {
+  color: #120853; 
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+
+
+@media (max-width: 992px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 40px 25px;
+  }
+  .servico-icone {
+      width: 150px;
+      height: 150px;
+  }
+  .servico-icone img {
+      max-width: 80px;
+  }
+  .servico-item h3 {
+      font-size: 1.2em;
+  }
+}
+
+@media (max-width: 576px) {
+  .servicos-grid {
+   
+    grid-template-columns: 1fr;
+  }
+}

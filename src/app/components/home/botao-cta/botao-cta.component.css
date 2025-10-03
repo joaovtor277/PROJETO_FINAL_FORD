@@ -1,0 +1,103 @@
+:host {
+  display: block;
+  background-color: #171b62; /* Um azul/lilás bem claro e acolhedor */
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-conteudo {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Garante que tudo dentro fique centralizado */
+}
+
+.cta-subtitulo {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #3747be;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-titulo {
+  font-size: 2.5rem;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.cta-descricao {
+  font-size: 1.1rem;
+  color: #e0e0e0; /* Levemente mais suave que branco puro */
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* Estilos para a lista de benefícios */
+.lista-beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+}
+
+.item-beneficio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.icone-beneficio {
+  width: 70px;   /* Ajuste o tamanho do seu ícone */
+  height: 70px;
+}
+
+/* Estilo para o botão principal */
+.btn-cta-principal {
+  display: inline-block;
+  background-color: #5a67d8; /* Cor de destaque principal */
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 18px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(90, 103, 216, 0.3);
+}
+
+.btn-cta-principal:hover {
+  background-color: #434190; /* Tom mais escuro no hover */
+  transform: translateY(-3px); /* Efeito de "levantar" o botão */
+}
+
+
+/* Deixando a seção responsiva para celulares */
+@media (max-width: 768px) {
+  .cta-titulo {
+      font-size: 2rem;
+  }
+
+  .lista-beneficios {
+      flex-direction: column; /* Itens um abaixo do outro */
+      align-items: center; /* Centraliza os itens na coluna */
+      gap: 20px;
+  }
+
+  .btn-cta-principal {
+      padding: 15px 30px;
+      font-size: 1rem;
+  }
+}

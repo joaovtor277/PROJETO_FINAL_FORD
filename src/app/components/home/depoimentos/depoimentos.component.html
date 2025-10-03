@@ -1,37 +1,34 @@
-<section id="depoimentos" class="section section-testimonials">
-    <div class="container">
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <div class="testimonial-header">
-            <span class="testimonial-icon"></span>
+<section id="depoimentos" class="secao secao-depoimentos">
+  <div class="container">
+    <ng-container *ngIf="listaDepoimentos.length > 0">
+      <div class="depoimento-card" *ngIf="listaDepoimentos[depoimentoAtualIndex] as depoimento">
+
+        <div class="depoimento-conteudo">
+          <div class="depoimento-cabecalho">
+            <span class="depoimento-icone"></span>
             <h4>Depoimento</h4>
           </div>
 
-          <blockquote class="testimonial-quote">
-            <p>
-              "A Alessandra foi um divisor de águas na jornada do nosso
-              filho. Com sua abordagem sensível e técnicas eficazes, vimos
-              uma melhora incrível não só nas notas, mas na confiança e no
-              prazer em aprender. Somos eternamente gratos."
-            </p>
-            <span class="quote-mark">“</span>
+          <blockquote class="depoimento-citacao">
+            <p>{{ depoimento.citacao }}</p>
+            <span class="marca-citacao">“</span>
           </blockquote>
 
-          <div class="testimonial-author">
-            <strong>Mariana L.</strong>
-            <span>Mãe do Lucas, 8 anos</span>
+          <div class="depoimento-autor">
+            <strong>{{ depoimento.autor }}</strong>
+            <span>{{ depoimento.descricao }}</span>
           </div>
         </div>
 
-        <div class="testimonial-image">
-          <img src="https://placehold.co/450x600/576574/ffffff?text=Foto+do+Pai"
-            alt="Pai de aluno que deu o depoimento" />
+        <div class="depoimento-imagem">
+          <img [src]="depoimento.imagemUrl" [alt]="'Foto de ' + depoimento.autor" />
 
-          <div class="testimonial-nav">
-            <button class="nav-btn prev-btn">&lt;</button>
-            <button class="nav-btn next-btn">&gt;</button>
+          <div class="depoimento-navegacao">
+            <button class="btn-nav btn-anterior" (click)="mostrarAnterior()">&lt;</button>
+            <button class="btn-nav btn-proximo" (click)="mostrarProximo()">&gt;</button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </ng-container>
+  </div>
+</section>
