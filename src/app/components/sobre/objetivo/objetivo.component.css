@@ -1,0 +1,77 @@
+/* src/app/components/sobre/objetivo/objetivo.component.css */
+
+.secao-vocacao {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .secao-vocacao .container {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUP 1.2s ease-out forwards;
+  }
+  
+  .imagem_objective {
+    width: 100%; 
+    max-width: 650px; 
+    height: auto; 
+    border-radius: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .secao-vocacao h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .secao-vocacao .linha-decorativa {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 0 auto 30px auto;
+    border-radius: 2px;
+  }
+  
+  .secao-vocacao p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  @keyframes fadeInUP {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .secao-vocacao {
+      padding: 80px 15px;
+    }
+  
+    .secao-vocacao h1 {
+      font-size: 2.2rem;
+    }
+  
+    .secao-vocacao p {
+      font-size: 1rem;
+    }
+  }

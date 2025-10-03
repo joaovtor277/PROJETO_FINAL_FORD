@@ -20,7 +20,7 @@ listaBeneficios = [
       texto: 'Estratégias eficazes'
     },
     {
-      icone: 'imagens/autoconfianca.png',
+      icone: 'imagens/autoconfiança.png',
       alt: 'Ícone de confiança',
       texto: 'Mais autoconfiança'
     }
