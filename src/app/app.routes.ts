@@ -4,6 +4,7 @@ import { SobreMimComponent } from './pages/sobre-mim/sobre-mim.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ConsultasComponent } from './pages/consultas/consultas.component';
 
+
 export const routes: Routes = [
     { path: '', component: HomeComponent },           
     { path: 'sobre', component: SobreMimComponent },

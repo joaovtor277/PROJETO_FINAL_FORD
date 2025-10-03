@@ -1,0 +1,110 @@
+/* Container principal que ocupa a tela inteira */
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4ff;
+    padding: 20px;
+  }
+  
+  /* A "caixa" branca do formulário */
+  .caixa-login {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  /* Cabeçalho dentro da caixa */
+  .cabecalho-login {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .cabecalho-login h2 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 8px;
+  }
+  
+  .cabecalho-login p {
+    font-size: 1rem;
+    color: #64748b;
+  }
+  
+  /* Grupo de formulário (label + input) */
+  .grupo-formulario {
+    margin-bottom: 20px;
+  }
+  
+  .grupo-formulario label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+  }
+  
+  .grupo-formulario input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .grupo-formulario input:focus {
+    outline: none;
+    border-color: #5a67d8;
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+  }
+  
+  .opcoes-formulario {
+    text-align: right;
+    margin-bottom: 25px;
+  }
+  
+  .esqueci-senha {
+    font-size: 0.9rem;
+    color: #5a67d8;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .esqueci-senha:hover {
+    text-decoration: underline;
+    color: #434190;
+  }
+  
+  
+  .botao-login {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #5a67d8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .botao-login:hover {
+    background-color: #434190;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 480px) {
+    .caixa-login {
+      padding: 30px;
+    }
+  
+    .cabecalho-login h2 {
+      font-size: 1.8rem;
+    }
+  }

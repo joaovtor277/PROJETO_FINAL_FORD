@@ -1,0 +1,39 @@
+<div class="container-login">
+    <div class="caixa-login">
+      <div class="cabecalho-login">
+        <img src="" alt="">
+        <h2>Acesse sua Conta</h2>
+        <p>Bem-vindo(a) de volta! Faça o login para continuar.</p>
+      </div>
+  
+      <form (ngSubmit)="onSubmit()">
+        <div class="grupo-formulario">
+          <label for="email">E-mail</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            [(ngModel)]="loginData.email" 
+            placeholder="seuemail@exemplo.com"
+            required>
+        </div>
+  
+        <div class="grupo-formulario">
+          <label for="password">Senha</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            [(ngModel)]="loginData.password" 
+            placeholder="Sua senha"
+            required>
+        </div>
+  
+        <div class="opcoes-formulario">
+          <a href="#" class="esqueci-senha">Esqueci minha senha</a>
+        </div>
+  
+        <button type="submit" class="botao-login">Entrar</button>
+      </form>
+    </div>
+  </div>

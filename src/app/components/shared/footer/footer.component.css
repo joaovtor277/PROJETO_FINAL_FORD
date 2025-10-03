@@ -107,7 +107,6 @@
     color: #e74c3c;
 }
 
-/* Responsividade não precisa de mudanças, já estava correta */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
