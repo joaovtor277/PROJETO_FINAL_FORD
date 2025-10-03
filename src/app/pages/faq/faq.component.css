@@ -1,0 +1,124 @@
+.main-pagina-faq {
+    background-color: #ffffff;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .cabecalho-pagina {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .cabecalho-pagina h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .cabecalho-pagina p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .titulo-categoria-faq {
+    font-size: 1.8rem;
+    color: #5a67d8;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .item-faq {
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .item-faq:last-child {
+    border-bottom: none;
+  }
+  
+  .item-faq summary {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3748;
+    padding: 20px 0;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .item-faq summary:hover {
+    color: #5a67d8;
+  }
+  
+  .item-faq summary::after {
+    content: '+';
+    font-size: 2rem;
+    font-weight: 300;
+    color: #5a67d8;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .item-faq details[open] > summary::after {
+    content: '−';
+    transform: rotate(180deg);
+  }
+  
+  .conteudo-faq {
+    padding: 0 10px 20px 10px;
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  
+  .conteudo-faq p {
+    margin: 0;
+  }
+  
+  .conteudo-faq strong {
+    color: #333;
+  }
+  
+  .rodape-cta-faq {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #f0f4ff;
+    border-radius: 8px;
+  }
+  
+  .rodape-cta-faq h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .rodape-cta-faq p {
+    color: #555;
+    margin-bottom: 25px;
+  }
+  
+  .botao-cta {
+    display: inline-block;
+    background-color: #5a67d8;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao-cta:hover {
+    background-color: #434190;
+  }
