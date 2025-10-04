@@ -1,0 +1,107 @@
+.container-formulario {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.cabecalho-pagina {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cabecalho-pagina h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+}
+
+.box-formulario {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  /* A LINHA ABAIXO ESTAVA INCOMPLETA. AGORA ESTÁ CORRIGIDA. */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); 
+}
+
+.resumo-agendamento {
+  margin-bottom: 20px;
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.resumo-agendamento h2 {
+  margin-top: 0;
+  color: #334155;
+}
+
+.resumo-agendamento p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin: 8px 0;
+}
+
+.divisor {
+  border: 0;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 30px 0;
+}
+
+form h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #334155;
+}
+
+.grupo-formulario {
+  margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+  outline: none;
+  border-color: #5a67d8;
+  box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+}
+
+.botao-confirmar {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #5a67d8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.botao-confirmar:hover {
+  background-color: #434190;
+}
+
+.botao-confirmar:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}

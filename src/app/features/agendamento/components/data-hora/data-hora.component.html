@@ -1,1 +1,32 @@
-<p>data-hora works!</p>
+<main class="container-data-hora">
+  <div class="cabecalho-pagina">
+    <h1 *ngIf="servicoSelecionado()">
+      Escolha a data e hora para: <strong>{{ servicoSelecionado()?.nome }}</strong>
+    </h1>
+    <p>Selecione uma data e um dos horários disponíveis abaixo.</p>
+  </div>
+
+  <div class="seletor-box">
+    <form (ngSubmit)="continuarAgendamento()">
+      <div class="grupo-formulario">
+        <label for="data">Data do Agendamento</label>
+        <input type="date" id="data" name="data" [(ngModel)]="dataSelecionada" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="horario">Horário Disponível</label>
+        <select id="horario" name="horario" [(ngModel)]="horarioSelecionado" required>
+          <option value="" disabled>Selecione um horário</option>
+          <option *ngFor="let horario of horariosDisponiveis" [value]="horario">
+            {{ horario }}
+          </option>
+        </select>
+      </div>
+
+      <button type="submit" class="botao-continuar" 
+              [disabled]="!dataSelecionada || !horarioSelecionado">
+        Continuar
+      </button>
+    </form>
+  </div>
+</main>

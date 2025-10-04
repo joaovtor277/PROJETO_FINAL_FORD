@@ -1,1 +1,56 @@
-<p>formulario works!</p>
+<main class="container-formulario">
+  <div class="cabecalho-pagina">
+    <h1>Finalize seu Agendamento</h1>
+    <p>Preencha os dados abaixo para confirmar sua consulta.</p>
+  </div>
+
+  <div class="box-formulario">
+    <div class="resumo-agendamento" *ngIf="agendamentoResumo()">
+      <h2>Resumo da sua Escolha</h2>
+      <p><strong>Serviço:</strong> {{ agendamentoResumo()?.servico?.nome }}</p>
+      <p><strong>Data:</strong> {{ agendamentoResumo()?.data | date:'dd/MM/yyyy' }}</p>
+      <p><strong>Horário:</strong> {{ agendamentoResumo()?.horario }}</p>
+    </div>
+
+    <hr class="divisor">
+
+    <form (ngSubmit)="confirmarAgendamento()">
+      <h2>Dados do Aluno</h2>
+
+      <div class="grupo-formulario">
+        <label for="nomeAluno">Nome completo do aluno*</label>
+        <input type="text" id="nomeAluno" name="nomeAluno" [(ngModel)]="dadosAluno.nomeAluno" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="idade">Idade*</label>
+        <input type="number" id="idade" name="idade" [(ngModel)]="dadosAluno.idade" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="nomeResponsavel">Nome do responsável*</label>
+        <input type="text" id="nomeResponsavel" name="nomeResponsavel" [(ngModel)]="dadosAluno.nomeResponsavel" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="telefone">Telefone / WhatsApp*</label>
+        <input type="tel" id="telefone" name="telefone" [(ngModel)]="dadosAluno.telefone" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="email">E-mail de contato*</label>
+        <input type="email" id="email" name="email" [(ngModel)]="dadosAluno.email" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="observacoes">Necessidades especiais / Observações (opcional)</label>
+        <textarea id="observacoes" name="observacoes" [(ngModel)]="dadosAluno.observacoes" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="botao-confirmar" 
+              [disabled]="!dadosAluno.nomeAluno || !dadosAluno.idade || !dadosAluno.nomeResponsavel || !dadosAluno.telefone || !dadosAluno.email">
+        Confirmar Agendamento
+      </button>
+    </form>
+  </div>
+</main>

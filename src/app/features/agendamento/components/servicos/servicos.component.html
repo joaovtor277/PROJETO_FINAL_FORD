@@ -1,1 +1,17 @@
-<p>servicos works!</p>
+<main class="container-servicos">
+  <div class="cabecalho-pagina">
+    <h1>Escolha o Serviço</h1>
+    <p>Selecione um dos serviços abaixo para continuar o seu agendamento.</p>
+  </div>
+
+  <div class="grade-servicos">
+    <div class="card-servico" *ngFor="let servico of servicos">
+      <img [src]="servico.icone" [alt]="servico.nome" class="icone-servico">
+      <h3 class="titulo-servico">{{ servico.nome }}</h3>
+      <p class="descricao-servico">{{ servico.descricao }}</p>
+      <button (click)="selecionarServico(servico)" class="botao-selecionar">
+        Selecionar
+      </button>
+    </div>
+  </div>
+</main>
