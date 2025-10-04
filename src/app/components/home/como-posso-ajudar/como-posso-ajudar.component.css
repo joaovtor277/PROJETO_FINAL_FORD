@@ -8,10 +8,9 @@
 .container {
   background-color: #f1f2f6; 
   border-radius: 30px;
-  padding: 60px 40px; 
+  padding: 60px 50px; 
   max-width: 1200px;
 }
-
 
 .secao-cabecalho {
   margin-bottom: 40px;
@@ -34,7 +33,6 @@
 
 .servicos-grid {
   display: grid;
-  
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center; 
   gap: 40px; 
@@ -75,7 +73,6 @@
   font-size: 1.4em;
   font-weight: 600;
 }
-
 
 
 @media (max-width: 992px) {
