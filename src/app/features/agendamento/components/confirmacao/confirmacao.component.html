@@ -1,1 +1,52 @@
-<p>confirmacao works!</p>
+<main class="container-confirmacao">
+  <div class="box-confirmacao" *ngIf="agendamentoFinal()">
+    <div class="icone-sucesso">
+      <img src="assets/icones/check-circle.svg" alt="Sucesso">
+    </div>
+
+    <div class="cabecalho-pagina">
+      <h1>Agendamento Confirmado!</h1>
+      <p>Sua consulta foi agendada com sucesso. Em breve, você receberá um e-mail com todos os detalhes.</p>
+    </div>
+
+    <hr class="divisor">
+
+    <div class="resumo-final">
+      <h2>Detalhes do Agendamento</h2>
+
+      <div class="detalhe-item">
+        <span>Serviço:</span>
+        <strong>{{ agendamentoFinal()?.servico?.nome }}</strong>
+      </div>
+      <div class="detalhe-item">
+        <span>Data:</span>
+        <strong>{{ agendamentoFinal()?.data | date:'fullDate':'pt-BR' }}</strong>
+      </div>
+      <div class="detalhe-item">
+        <span>Horário:</span>
+        <strong>{{ agendamentoFinal()?.horario }}</strong>
+      </div>
+      <div class="detalhe-item">
+        <span>Modalidade:</span>
+        <strong>{{ agendamentoFinal()?.modalidade }}</strong>
+      </div>
+      <div class="detalhe-item">
+        <span>Nome do Aluno:</span>
+        <strong>{{ agendamentoFinal()?.dadosAluno?.nomeAluno }}</strong>
+      </div>
+      <div class="detalhe-item">
+        <span>Nome do Responsável:</span>
+        <strong>{{ agendamentoFinal()?.dadosAluno?.nomeResponsavel }}</strong>
+      </div>
+      <div class="detalhe-item">
+        <span>Telefone de Contato:</span>
+        <strong>{{ agendamentoFinal()?.dadosAluno?.telefone }}</strong>
+      </div>
+    </div>
+
+    <div class="botoes-acao">
+      <button (click)="novoAgendamento()" class="botao-secundario">Fazer Novo Agendamento</button>
+      <button (click)="finalizar()" class="botao-principal">Finalizar</button>
+    </div>
+  </div>
+</main>
