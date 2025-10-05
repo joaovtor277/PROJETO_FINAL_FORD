@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { Agendamento, AgendamentoService, DadosAluno } from '../../services/agendamento.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { Servico } from '../servicos/servicos.component';
 
 @Component({
   selector: 'app-formulario',
@@ -15,9 +14,8 @@ import { Servico } from '../servicos/servicos.component';
 export class FormularioComponent implements OnInit {
   private router = inject(Router);
   private agendamentoService = inject(AgendamentoService);
-  agendamentoResumo = signal<Agendamento | null>(null);
-  
 
+  agendamentoResumo = signal<Agendamento | null>(null);
   
   dadosAluno: DadosAluno = {
     nomeAluno: '',
@@ -28,28 +26,28 @@ export class FormularioComponent implements OnInit {
     observacoes: ''
   };
 
+  
+  modalidadeSelecionada: string = '';
+
   ngOnInit(): void {
     const estadoAtual = this.agendamentoService.getAgendamentoState()();
     if (estadoAtual.servico && estadoAtual.data && estadoAtual.horario) {
       this.agendamentoResumo.set(estadoAtual);
     } else {
-      
       this.router.navigate(['/agendamento/servicos']);
     }
   }
 
   confirmarAgendamento(): void {
     
-    if (this.dadosAluno.nomeAluno && this.dadosAluno.idade && this.dadosAluno.nomeResponsavel && this.dadosAluno.telefone && this.dadosAluno.email) {
+    if (this.dadosAluno.nomeAluno && this.dadosAluno.idade && this.dadosAluno.nomeResponsavel && this.dadosAluno.telefone && this.dadosAluno.email && this.modalidadeSelecionada) {
       
       this.agendamentoService.setDadosAluno(this.dadosAluno);
-
+      this.agendamentoService.setModalidade(this.modalidadeSelecionada);
       
       this.router.navigate(['/agendamento/confirmacao']);
     } else {
-      alert('Por favor, preencha todos os campos obrigatórios.');
+      alert('Por favor, preencha todos os campos obrigatórios, incluindo a modalidade.');
     }
   }
 }
-
-

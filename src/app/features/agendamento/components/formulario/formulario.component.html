@@ -16,12 +16,12 @@
 
     <form (ngSubmit)="confirmarAgendamento()">
       <h2>Dados do Aluno</h2>
-
+      
       <div class="grupo-formulario">
         <label for="nomeAluno">Nome completo do aluno*</label>
         <input type="text" id="nomeAluno" name="nomeAluno" [(ngModel)]="dadosAluno.nomeAluno" required>
       </div>
-
+      
       <div class="grupo-formulario">
         <label for="idade">Idade*</label>
         <input type="number" id="idade" name="idade" [(ngModel)]="dadosAluno.idade" required>
@@ -31,15 +31,41 @@
         <label for="nomeResponsavel">Nome do responsável*</label>
         <input type="text" id="nomeResponsavel" name="nomeResponsavel" [(ngModel)]="dadosAluno.nomeResponsavel" required>
       </div>
-
+      
       <div class="grupo-formulario">
         <label for="telefone">Telefone / WhatsApp*</label>
         <input type="tel" id="telefone" name="telefone" [(ngModel)]="dadosAluno.telefone" required>
       </div>
-
+      
       <div class="grupo-formulario">
         <label for="email">E-mail de contato*</label>
         <input type="email" id="email" name="email" [(ngModel)]="dadosAluno.email" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label>Modalidade do Atendimento*</label>
+        <div class="opcoes-radio">
+          <label for="presencial" class="radio-label">
+            <input 
+              type="radio" 
+              id="presencial" 
+              name="modalidade" 
+              value="Presencial"
+              [(ngModel)]="modalidadeSelecionada"
+              required>
+            <span>Presencial</span>
+          </label>
+          <label for="online" class="radio-label">
+            <input 
+              type="radio" 
+              id="online" 
+              name="modalidade" 
+              value="Online"
+              [(ngModel)]="modalidadeSelecionada"
+              required>
+            <span>Online</span>
+          </label>
+        </div>
       </div>
 
       <div class="grupo-formulario">
@@ -48,7 +74,7 @@
       </div>
 
       <button type="submit" class="botao-confirmar" 
-              [disabled]="!dadosAluno.nomeAluno || !dadosAluno.idade || !dadosAluno.nomeResponsavel || !dadosAluno.telefone || !dadosAluno.email">
+              [disabled]="!dadosAluno.nomeAluno || !dadosAluno.idade || !dadosAluno.nomeResponsavel || !dadosAluno.telefone || !dadosAluno.email || !modalidadeSelecionada">
         Confirmar Agendamento
       </button>
     </form>
