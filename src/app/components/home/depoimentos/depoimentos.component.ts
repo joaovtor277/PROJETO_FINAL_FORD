@@ -11,22 +11,22 @@ export class DepoimentosComponent {
 
   listaDepoimentos = [
     {
-      citacao: '"A Alessandra foi um divisor de águas na jornada do nosso filho. Com sua abordagem sensível e técnicas eficazes, vimos uma melhora incrível não só nas notas, mas na confiança e no prazer em aprender. Somos eternamente gratos."',
+      citacao: 'Desde o primeiro encontro, senti que a pedagoga realmente enxergava minha filha como uma criança cheia de potencial, e não apenas pelo diagnóstico. As estratégias que ela usou para estimular a atenção e a socialização da Joyce foram incríveis. Em poucos meses, notei avanços que não tinha visto antes: ela passou a interagir mais e a se expressar melhor nas tarefas. Ter esse acompanhamento pedagógico especializado foi um divisor de águas para a nossa família.',
       autor: 'Jucilene Peixoto.',
-      descricao: 'Mãe do joyce, 12 anos',
-      imagemUrl: 'assets/imagens/depoimento-1.jpg' 
+      descricao: 'mãe de Joyce (12 anos, Autismo)',
+      imagemUrl: 'imagens/jucilene.jpg' 
     },
     {
-      citacao: '"Como diretor de uma escola, posso afirmar que a consultoria da Alessandra transformou nossa abordagem de inclusão. Ela nos deu ferramentas práticas e uma nova perspectiva que beneficiaram toda a comunidade escolar."',
+      citacao: '“A dedicação e o carinho da pedagoga fizeram toda diferença na vida do meu filho. O Adriel sempre teve muita vontade de aprender, mas precisava de alguém que entendesse o seu ritmo e suas limitações sem deixá-lo de lado. Com o acompanhamento individualizado e as atividades adaptadas, ele ganhou mais autonomia e confiança. Hoje, ele se comunica melhor e participa de tudo com muito mais segurança. Sou muito grata por todo o apoio e paciência nesse processo.”',
       autor: 'Ana Paula Procopio.',
-      descricao: 'Diretor Escolar',
-      imagemUrl: 'assets/imagens/depoimento-2.jpg' 
+      descricao: 'mãe de Adriel (22 anos, Síndrome de Down)',
+      imagemUrl: '/imagens/anapaula1.jpg' 
     },
     {
-      citacao: '"Meu filho tinha muita dificuldade de concentração. O trabalho individualizado e o carinho da Alessandra o ajudaram a se encontrar nos estudos e a desenvolver seu potencial. Hoje ele é um aluno muito mais feliz e seguro."',
+      citacao: '“O Enzo sempre foi muito agitado e tinha dificuldade de se concentrar nas tarefas. A pedagoga trouxe um olhar acolhedor e ao mesmo tempo firme, ajudando ele a entender seus limites e desenvolver hábitos de estudo com leveza. Ela também me orientou sobre como lidar com as crises e criar uma rotina mais tranquila em casa. Hoje, o Enzo está mais focado, se sente capaz e feliz por aprender. Só tenho a agradecer pelo carinho e profissionalismo!”',
       autor: 'Aline Freitas.',
-      descricao: 'Mãe da Sofia, 10 anos',
-      imagemUrl: 'assets/imagens/depoimento-3.jpg' 
+      descricao: 'mãe de Enzo (9 anos, Hiperatividade e TOD)',
+      imagemUrl: 'imagens/aline.jpg' 
     }
   ];
 

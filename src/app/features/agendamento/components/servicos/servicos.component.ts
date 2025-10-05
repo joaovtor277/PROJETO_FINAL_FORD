@@ -28,19 +28,19 @@ export class ServicosComponent {
       id: 1,
       nome: 'Reforço Escolar',
       descricao: 'Apoio focado nas dificuldades específicas do aluno em matérias escolares.',
-      icone: 'assets/icones/reforco-escolar.png' // Lembre-se de adicionar os ícones
+      icone: 'imagens/card_reforço.png' 
     },
     {
       id: 2,
       nome: 'Acompanhamento Psicopedagógico',
       descricao: 'Intervenção completa para investigar e tratar as causas da dificuldade de aprendizagem.',
-      icone: 'assets/icones/psicopedagogico.png'
+      icone: 'imagens/card_atendimento_psi.jpg'
     },
     {
       id: 3,
       nome: 'Orientação Familiar',
       descricao: 'Sessões com os pais para alinhar estratégias e criar um ambiente de apoio em casa.',
-      icone: 'assets/icones/orientacao-familiar.png'
+      icone: 'imagens/card_orientação_fam.jpg'
     }
   ];
 

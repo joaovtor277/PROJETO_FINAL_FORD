@@ -43,9 +43,10 @@
 }
 
 .icone-servico {
-  width: 60px;
-  height: 60px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto 20px auto;
+  border-radius: 20px;
 }
 
 .titulo-servico {
@@ -58,7 +59,7 @@
   font-size: 1rem;
   color: #64748b;
   line-height: 1.6;
-  flex-grow: 1; /* Faz a descrição ocupar o espaço e alinhar os botões */
+  flex-grow: 1; 
   margin-bottom: 25px;
 }
 
