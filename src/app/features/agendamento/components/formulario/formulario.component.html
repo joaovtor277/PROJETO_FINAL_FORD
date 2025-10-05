@@ -73,6 +73,19 @@
         <textarea id="observacoes" name="observacoes" [(ngModel)]="dadosAluno.observacoes" rows="4"></textarea>
       </div>
 
+        <div class="grupo-formulario-lgpd">
+    <input 
+        type="checkbox" 
+        id="lgpd" 
+        name="lgpd" 
+        [(ngModel)]="aceiteLgpd"
+        required>
+    <label for="lgpd">
+        Eu li e concordo com os 
+        <a href="/termos-de-uso" target="_blank">Termos de Uso e Política de Privacidade</a>.
+    </label>
+</div>
+
       <button type="submit" class="botao-confirmar" 
               [disabled]="!dadosAluno.nomeAluno || !dadosAluno.idade || !dadosAluno.nomeResponsavel || !dadosAluno.telefone || !dadosAluno.email || !modalidadeSelecionada">
         Confirmar Agendamento

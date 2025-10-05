@@ -19,8 +19,8 @@
 
 .hero-imagem {
   flex-shrink: 0; 
-  width: 500px; 
-  height: 500px; 
+  width: 600px; 
+  height: 600px; 
   border-radius: 50%; 
   overflow: hidden; 
   border: 8px solid rgba(255, 255, 255, 0.2); 

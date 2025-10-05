@@ -130,6 +130,29 @@ form h2 {
   transition: all 0.3s;
 }
 
+.grupo-formulario-lgpd {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.grupo-formulario-lgpd input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+}
+
+.grupo-formulario-lgpd label {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.grupo-formulario-lgpd a {
+  color: #5a67d8;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 .botao-confirmar:hover {
   background-color: #434190;
 }
@@ -138,3 +161,4 @@ form h2 {
   background-color: #a0aec0;
   cursor: not-allowed;
 }
+

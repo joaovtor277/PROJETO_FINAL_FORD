@@ -16,7 +16,9 @@ export class FormularioComponent implements OnInit {
   private agendamentoService = inject(AgendamentoService);
 
   agendamentoResumo = signal<Agendamento | null>(null);
-  
+  aceiteLgpd: boolean = false;
+
+
   dadosAluno: DadosAluno = {
     nomeAluno: '',
     idade: null,
@@ -40,14 +42,14 @@ export class FormularioComponent implements OnInit {
 
   confirmarAgendamento(): void {
     
-    if (this.dadosAluno.nomeAluno && this.dadosAluno.idade && this.dadosAluno.nomeResponsavel && this.dadosAluno.telefone && this.dadosAluno.email && this.modalidadeSelecionada) {
+    if (this.dadosAluno.nomeAluno && this.dadosAluno.idade && this.dadosAluno.nomeResponsavel && this.dadosAluno.telefone && this.dadosAluno.email && this.modalidadeSelecionada && this.aceiteLgpd) {
       
       this.agendamentoService.setDadosAluno(this.dadosAluno);
       this.agendamentoService.setModalidade(this.modalidadeSelecionada);
       
       this.router.navigate(['/agendamento/confirmacao']);
     } else {
-      alert('Por favor, preencha todos os campos obrigatórios, incluindo a modalidade.');
+      alert('Por favor, preencha todos os campos obrigatórios');
     }
   }
 }

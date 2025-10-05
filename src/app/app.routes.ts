@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SobreMimComponent } from './pages/sobre-mim/sobre-mim.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ConsultasComponent } from './pages/consultas/consultas.component';
+import { TermosDeUsoComponent } from './pages/termos-de-uso/termos-de-uso.component';
 
 export const routes: Routes = [
  
@@ -12,7 +13,7 @@ export const routes: Routes = [
     { path: 'sobre', component: SobreMimComponent },
     { path: 'faq', component: FaqComponent },
     { path: 'consultas', component: ConsultasComponent },
-
+    { path: 'termos-de-uso', component: TermosDeUsoComponent },
     
     {
         path: 'agendamento', 

@@ -16,39 +16,28 @@ header nav ul{
     gap: 35px;    
 }
 
-/* Estilo final para os links de navegação no header */
 nav a {
-  /* ESTADO PADRÃO (Apenas o nome, como você pediu) */
-  color: #334155;             /* Cor do texto cinza escuro */
-  background-color: transparent; /* Fundo transparente */
+  
+  color: #334155;             
+  background-color: transparent; 
   text-decoration: none;
   font-weight: 600;
   padding: 10px 15px;
   border-radius: 6px;
-
-  /* Animação suave para as mudanças */
-  transition: color 0.3s ease, background-color 0.3s ease;
+transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* EFEITO AO PASSAR O MOUSE POR CIMA */
 nav a:hover {
-  /* A LETRA FICA BRANCA (seu pedido) */
+  
   color: #ffffff;
-
-  /* E O FUNDO FICA ESCURO (necessário para o branco ser visível) */
   background-color: #5a67d8; 
 }
 
-/* Estilo para o link da página ATIVA (recomendado) */
 nav a.active {
   color: #ffffff;
   background-color: #5a67d8;
   font-weight: 700;
 }
-
-
-
-
 
 .logo_principal{
     width: 150px;
