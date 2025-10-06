@@ -5,6 +5,7 @@ import { GaleriaComponent } from '../../components/home/galeria/galeria.componen
 import { DepoimentosComponent } from '../../components/home/depoimentos/depoimentos.component';
 import { BotaoCtaComponent } from '../../components/home/botao-cta/botao-cta.component';
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -14,7 +15,7 @@ import { BotaoCtaComponent } from '../../components/home/botao-cta/botao-cta.com
     ComoPossoAjudarComponent,
     GaleriaComponent,
     DepoimentosComponent,
-    BotaoCtaComponent
+    BotaoCtaComponent,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
