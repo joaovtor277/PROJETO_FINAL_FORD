@@ -11,7 +11,7 @@
     <div class="servicos-grid">
       <div *ngFor="let servico of listaDeServicos" class="servico-item">
         <div class="servico-icone">
-          <img [src]="servico.icone" [alt]="servico.titulo"/>
+          <img [src]="servico.icone" [alt]="servico.titulo" class="img_ajuda"/>
         </div>
         <h3>{{ servico.titulo }}</h3>
       </div>

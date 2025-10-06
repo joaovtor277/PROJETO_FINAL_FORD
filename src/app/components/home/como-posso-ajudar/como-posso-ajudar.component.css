@@ -1,15 +1,23 @@
-:host {
-  display: block;
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   background-color: #ffffff;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .container {
-  background-color: #f1f2f6; 
+  background-color: #f1f2f6;
   border-radius: 30px;
-  padding: 60px 50px; 
-  max-width: 1200px;
+  width: 90%;
+  min-height: 85vh;
+  max-width: 1800px; /* <-- SINTAXE CORRIGIDA */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px; /* <-- SINTAXE CORRIGIDA E APLICADA A TODOS OS LADOS */
 }
 
 .secao-cabecalho {
@@ -18,7 +26,7 @@
 }
 
 .secao-cabecalho h2 {
-  color: #120853; 
+  color: #120853;
   font-size: 2.8em;
   margin-bottom: 10px;
 }
@@ -30,12 +38,15 @@
   margin: 0 auto 40px auto;
 }
 
-
 .servicos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-items: center; 
-  gap: 40px; 
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.img_ajuda{
+  width: 700px;
 }
 
 .servico-item {
@@ -43,11 +54,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* ATUALIZAÇÃO: Garante que o container do item seja largo o suficiente para o ícone de 300px */
+  min-width: 300px;
+  max-width: 300px;
 }
 
 .servico-icone {
-  width: 200px; 
-  height: 200px; 
+  width: 300px;
+  height: 300px;
   background-color: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -64,42 +78,59 @@
 }
 
 .servico-icone img {
-  max-width: 120px; 
+  max-width: 120px;
   height: auto;
 }
 
 .servico-item h3 {
-  color: #120853; 
-  font-size: 1.4em;
+  color: #120853;
+  font-size: 25px;
   font-weight: 600;
 }
 
-
-@media (max-width: 992px) {
+@media (max-width: 1400px) {
   .servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; 
   }
 }
 
 @media (max-width: 768px) {
   .container {
-      padding: 40px 25px;
+    padding: 40px 25px;
+    min-height: 0;
+  }
+  .servico-item {
+     min-width: 200px; 
   }
   .servico-icone {
-      width: 150px;
-      height: 150px;
+    width: 200px;
+    height: 200px;
   }
   .servico-icone img {
-      max-width: 80px;
+    max-width: 100px;
   }
   .servico-item h3 {
-      font-size: 1.2em;
+    font-size: 1.2em;
   }
 }
 
 @media (max-width: 576px) {
   .servicos-grid {
-   
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .servico-item {
+    min-width: initial; 
+       width: 100%;
+  }
+  .servico-icone {
+    width: 180px;
+    height: 180px;
+  }
+  .secao-cabecalho h2 {
+    font-size: 2em;
   }
 }
