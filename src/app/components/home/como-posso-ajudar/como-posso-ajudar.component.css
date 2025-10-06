@@ -134,3 +134,56 @@ section {
     font-size: 2em;
   }
 }
+
+/* ======================================================= */
+/* ESTILOS ATUALIZADOS PARA A DESCRIÇÃO DO SERVIÇO        */
+/* ======================================================= */
+
+/*
+ * O estilo do .servico-item-wrapper foi removido daqui
+ * e colocado dentro do .active abaixo para um efeito mais limpo.
+*/
+
+/* QUANDO O ITEM ESTÁ ATIVO (ABERTO) */
+.servico-item-wrapper.active {
+  /* ALTERADO: Fundo do item ativo agora é branco para destacar o texto */
+  background-color: #ffffff;
+  
+  /* ADICIONADO: Sombra para destacar o card branco sobre o fundo cinza da seção */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  
+  /* Mantemos o efeito de "crescimento" */
+  transform: scale(1.03);
+  transition: all 0.4s ease-in-out;
+  border-radius: 20px; /* Garantimos que a borda arredondada se aplique ao fundo */
+}
+
+/* O container principal da descrição */
+.servico-descricao {
+  width: 100%;
+  padding: 10px 20px 25px 20px;
+  text-align: left;
+  border-top: 1px solid #eeeeee; /* Borda um pouco mais clara */
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+/* O parágrafo com a descrição do serviço */
+.servico-descricao p {
+  color: #000000;
+  font-size: 21px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
