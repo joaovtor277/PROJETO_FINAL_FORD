@@ -29,8 +29,8 @@
   }
   
   .item-experiencia img {
-    width: 180px;  
-    height: 180px;
+    width: 250px;  
+    height: 250px;
     border-radius: 15px; 
     object-fit: cover; 
     filter: grayscale(100%);
