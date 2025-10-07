@@ -1,7 +1,7 @@
 
 header{
   color: white;
-  padding: 10px 0;
+  padding: 10px 20px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -93,5 +93,25 @@ font-weight: 700;
 @media (max-width: 576px) {
   .servico-item-wrapper {
      max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+ 
+  header {
+    flex-direction: column;
+    gap: 20px; 
+  }
+
+ 
+  header nav ul {
+    flex-direction: column;
+    gap: 15px; 
+  }
+
+  
+  nav a {
+    display: block; 
+    text-align: center;
   }
 }

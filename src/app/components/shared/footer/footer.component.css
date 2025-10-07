@@ -5,24 +5,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* O container principal que alinha as colunas */
+
 .footer-container {
     max-width: 1140px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza as colunas na página */
-    gap: 60px;
+    justify-content: center; 
 }
 
-/* Colunas individuais do rodapé */
 .footer-about, .footer-links, .footer-quick-links {
     flex: 1;
-    min-width: 250px; /* Aumentei um pouco para melhor espaçamento */
-    text-align: center; /* <<< MÁGICA ACONTECE AQUI! Centraliza todo o texto (títulos, parágrafos, links) dentro da coluna */
+    min-width: 250px; 
+    text-align: center; 
 }
 
-/* Título da primeira coluna */
+
 .footer-title {
     font-size: 24px;
     font-weight: 700;
@@ -35,10 +33,10 @@
     font-size: 15px;
     line-height: 1.7;
     color: #555;
-    margin-bottom: 25px; /* Aumentei a margem para dar espaço para os ícones */
+    margin-bottom: 25px; 
 }
 
-/* Títulos das colunas de links */
+
 .footer-subtitle {
     font-size: 18px;
     font-weight: 600;
@@ -46,7 +44,6 @@
     margin-bottom: 20px;
 }
 
-/* Container dos Links de Redes Sociais */
 
 .social-links a {
     display: inline-flex;
@@ -59,7 +56,7 @@
     color: #2a5a8a;
     font-size: 18px;
     text-decoration: none;
-    margin: 0 5px; /* Usei margem nos dois lados para um espaçamento igual */
+    margin: 0 5px; 
     transition: all 0.3s ease;
 }
 
@@ -69,10 +66,10 @@
     transform: translateY(-3px);
 }
 
-/* Listas de Links */
+
 .footer-links ul, .footer-quick-links ul {
     list-style: none;
-    padding: 0; /* Removi o padding excessivo */
+    padding: 0; 
     margin: 0;
 }
 
@@ -107,12 +104,6 @@
     color: #e74c3c;
 }
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-}
 
 .social-icon {
     width: 20px;
@@ -126,3 +117,38 @@
     vertical-align: middle;
     margin: 0 4px; 
   }
+
+ 
+@media (max-width: 768px) {
+   
+    .site-footer {
+        padding: 40px 20px; 
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+   
+    .footer-about, .footer-links, .footer-quick-links {
+        text-align: center;
+    }
+
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+   
+    .social-links {
+        justify-content: center;
+    }
+
+    
+    .footer-title {
+        font-size: 20px;
+    }
+}
+

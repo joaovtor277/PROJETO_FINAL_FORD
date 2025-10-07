@@ -44,7 +44,7 @@
   line-height: 1.2;
   margin-bottom: 20px;
   color: #ffffff;
-  text-align: justify
+  text-align: justify;
 }
 
 .hero-conteudo p {
@@ -122,13 +122,31 @@
   }
   .hero-conteudo h1 {
       font-size: 1.8em;
+      text-align: center;
   }
+
+
+  .hero-conteudo p {
+      font-size: 13px;
+      text-align: justify;
+      padding: 0 15px;
+  }
+
+  .imagem_quem_eu_sou{
+      width: 100px; 
+      height: 200px;
+  }
+
   .hero-acoes {
       flex-direction: column; 
       gap: 15px;
       width: 100%; 
+      align-items: center;
+
   }
   .btn {
-      width: 100%; 
+      width: 50%; 
+      text-align: center;
+      justify-content: center;
   }
 }

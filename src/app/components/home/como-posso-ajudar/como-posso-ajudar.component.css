@@ -13,12 +13,11 @@ section {
   border-radius: 30px;
   width: 90%;
   min-height: 85vh;
-  max-width: 1800px; /* <-- SINTAXE CORRIGIDA */
+  max-width: 1800px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px; /* <-- SINTAXE CORRIGIDA E APLICADA A TODOS OS LADOS */
-}
+  padding: 60px; }
 
 .secao-cabecalho {
   margin-bottom: 40px;
@@ -85,6 +84,10 @@ section {
   color: #120853;
   font-size: 25px;
   font-weight: 600;
+}
+
+.servico-descricao p{
+  text-align: justify;
 }
 
 @media (max-width: 1400px) {

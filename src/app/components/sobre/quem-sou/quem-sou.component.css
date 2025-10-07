@@ -26,6 +26,10 @@
     flex: 1.5;
   }
   
+  .texto_quem_sou{
+    text-align: justify;
+  }
+  
   .conteudo-sobre .cabecalho-secao {
     text-align: left;
     margin-bottom: 30px;
