@@ -87,7 +87,6 @@ form h2 {
   box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
 }
 
-/* Estilos para as opções de rádio (Modalidade) */
 .opcoes-radio {
   display: flex;
   gap: 20px;
@@ -114,7 +113,6 @@ form h2 {
   width: 18px;
   height: 18px;
 }
-/* Fim dos estilos de rádio */
 
 .botao-confirmar {
   width: 100%;
@@ -159,6 +157,23 @@ form h2 {
 
 .botao-confirmar:disabled {
   background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.error-messages p {
+  color: #e53935; 
+  font-size: 0.8em;
+  margin: 5px 0 0 0;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid #e53935;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
   cursor: not-allowed;
 }
 
