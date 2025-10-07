@@ -18,7 +18,7 @@
   
   .imagem_objective {
     width: 100%; 
-    max-width: 650px; 
+    max-width: 900px; 
     height: auto; 
     border-radius: 20px;
     margin-bottom: 25px;
@@ -41,11 +41,12 @@
   
   .secao-vocacao p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #555;
     line-height: 1.8;
     max-width: 700px;
     margin: 0 auto;
+    text-align: justify;
   }
   
   @keyframes fadeInUP {

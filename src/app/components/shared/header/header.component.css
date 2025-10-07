@@ -30,12 +30,12 @@ transition: color 0.3s ease, background-color 0.3s ease;
 nav a:hover {
 
 color: #ffffff;
-background-color: #5a67d8; 
+background-color: #162186; 
 }
 
 nav a.active {
 color: #ffffff;
-background-color: #5a67d8;
+background-color: #131f86;
 font-weight: 700;
 }
 

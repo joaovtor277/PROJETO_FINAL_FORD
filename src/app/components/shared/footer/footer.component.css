@@ -113,3 +113,16 @@
         gap: 40px;
     }
 }
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    color:#2a5a8a;
+}
+
+.heart-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0 4px; 
+  }
