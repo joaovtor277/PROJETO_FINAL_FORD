@@ -2,29 +2,28 @@ import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Agendamento, AgendamentoService, DadosAluno } from '../../services/agendamento.service';
 import { Router } from '@angular/router';
-// NOVOS IMPORTS para Reactive Forms
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RouterLink } from "../../../../../../node_modules/@angular/router/router_module.d-Bx9ArA6K";
 
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  // ADICIONADO ReactiveFormsModule aos imports
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterLink],
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
   private router = inject(Router);
   private agendamentoService = inject(AgendamentoService);
-  private fb = inject(FormBuilder); // Injeta o FormBuilder
+  private fb = inject(FormBuilder); 
 
   agendamentoResumo = signal<Agendamento | null>(null);
 
-  // A propriedade do formulário
+  
   formulario!: FormGroup;
 
   ngOnInit(): void {
-    // Criação do formulário com suas regras de validação
+    
     this.formulario = this.fb.group({
       nomeAluno: ['', [Validators.required, Validators.minLength(3)]],
       idade: [null, [Validators.required, Validators.min(1)]],
@@ -44,7 +43,7 @@ export class FormularioComponent implements OnInit {
     }
   }
 
-  // Getters para facilitar o acesso no HTML
+  
   get nomeAluno() { return this.formulario.get('nomeAluno'); }
   get idade() { return this.formulario.get('idade'); }
   get nomeResponsavel() { return this.formulario.get('nomeResponsavel'); }
@@ -55,7 +54,7 @@ export class FormularioComponent implements OnInit {
 
   confirmarAgendamento(): void {
     if (this.formulario.valid) {
-      // Se o formulário for válido, extraímos os dados
+      
       const dadosAluno: DadosAluno = {
         nomeAluno: this.formulario.value.nomeAluno,
         idade: this.formulario.value.idade,
@@ -70,7 +69,7 @@ export class FormularioComponent implements OnInit {
 
       this.router.navigate(['/agendamento/confirmacao']);
     } else {
-      // Se for inválido, marca todos os campos para exibir os erros
+  
       this.formulario.markAllAsTouched();
       console.log('Formulário inválido');
     }

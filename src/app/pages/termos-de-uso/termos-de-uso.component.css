@@ -1,0 +1,70 @@
+.privacy-container {
+  max-width: 800px;
+  margin: 60px auto; /* 60px de espaço em cima/baixo, centralizado na horizontal */
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif; /* Usando a mesma fonte do seu rodapé */
+  color: #333; /* Cor de texto padrão escura e legível */
+}
+
+/* Título principal da página */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #120853; /* Cor principal do seu site */
+  border-bottom: 2px solid #f0f2f6; /* Linha divisória sutil */
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+/* Subtítulos das seções */
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #120853;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+/* Texto de "última atualização" */
+.last-updated {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 30px;
+  display: block;
+}
+
+/* Estilo para parágrafos e itens de lista para garantir boa legibilidade */
+p, li {
+  line-height: 1.8; /* Espaçamento ideal entre as linhas */
+  font-size: 1rem;
+  color: #555;
+}
+
+ul {
+  padding-left: 25px; /* Recuo padrão para listas */
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px; /* Espaço entre os itens da lista */
+}
+
+/* Destaque para textos importantes */
+strong {
+  color: #000;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .privacy-container {
+    margin: 40px auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
