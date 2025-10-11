@@ -30,9 +30,9 @@ export class FormularioComponent implements OnInit {
       nomeResponsavel: ['', [Validators.required, Validators.minLength(3)]],
       telefone: ['', [Validators.required, Validators.pattern(/^\(\d{2}\)\s\d{5}-\d{4}$/)]],
       email: ['', [Validators.required, Validators.email]],
-      observacoes: [''], // Campo opcional
+      observacoes: [''], 
       modalidade: ['', Validators.required],
-      aceiteLgpd: [false, Validators.requiredTrue] // Validador para garantir que o checkbox seja marcado
+      aceiteLgpd: [false, Validators.requiredTrue] 
     });
 
     const estadoAtual = this.agendamentoService.getAgendamentoState()();

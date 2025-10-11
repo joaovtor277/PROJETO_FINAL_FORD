@@ -13,6 +13,7 @@ export const routes: Routes = [
     { path: 'faq', component: FaqComponent }, 
     { path: 'termos-de-uso', component: TermosDeUsoComponent },
     
+    
     {
         path: 'agendamento', 
         loadChildren: () => import('./features/agendamento/agendamento.routes')
