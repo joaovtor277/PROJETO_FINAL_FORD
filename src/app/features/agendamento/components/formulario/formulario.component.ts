@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Agendamento, AgendamentoService, DadosAluno } from '../../services/agendamento.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { RouterLink } from "../../../../../../node_modules/@angular/router/router_module.d-Bx9ArA6K";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-formulario',
