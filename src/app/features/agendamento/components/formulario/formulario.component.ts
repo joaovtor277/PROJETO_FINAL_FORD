@@ -8,7 +8,7 @@ import { RouterLink } from "@angular/router";
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
@@ -26,7 +26,7 @@ export class FormularioComponent implements OnInit {
     
     this.formulario = this.fb.group({
       nomeAluno: ['', [Validators.required, Validators.minLength(3)]],
-      idade: [null, [Validators.required, Validators.min(1)]],
+      idade: [null, [Validators.required, Validators.min(1), Validators.max(15)]],
       nomeResponsavel: ['', [Validators.required, Validators.minLength(3)]],
       telefone: ['', [Validators.required, Validators.pattern(/^\(\d{2}\)\s\d{5}-\d{4}$/)]],
       email: ['', [Validators.required, Validators.email]],

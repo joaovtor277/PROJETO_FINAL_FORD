@@ -4,7 +4,8 @@ import { ComoPossoAjudarComponent } from '../../components/home/como-posso-ajuda
 import { GaleriaComponent } from '../../components/home/galeria/galeria.component';
 import { DepoimentosComponent } from '../../components/home/depoimentos/depoimentos.component';
 import { BotaoCtaComponent } from '../../components/home/botao-cta/botao-cta.component';
-
+import { CommonModule } from '@angular/common';
+import { RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,9 @@ import { BotaoCtaComponent } from '../../components/home/botao-cta/botao-cta.com
     GaleriaComponent,
     DepoimentosComponent,
     BotaoCtaComponent,
-  ],
+    CommonModule,
+
+],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

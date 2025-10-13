@@ -13,12 +13,9 @@ export const routes: Routes = [
     { path: 'faq', component: FaqComponent }, 
     { path: 'termos-de-uso', component: TermosDeUsoComponent },
     
-    
-    {
-        path: 'agendamento', 
-        loadChildren: () => import('./features/agendamento/agendamento.routes')
-                            .then(m => m.AGENDAMENTO_ROUTES)
-    },
+    {path: 'agendamento', 
+    loadChildren: () => import('./features/agendamento/agendamento.routes')
+                            .then(m => m.AGENDAMENTO_ROUTES) },
     { path: '**', redirectTo: '', pathMatch: 'full' } 
 ];
 

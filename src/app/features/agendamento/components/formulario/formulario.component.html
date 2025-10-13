@@ -37,6 +37,7 @@
           <div class="error-messages">
             @if (idade?.errors?.['required']) { <p>A idade é obrigatória.</p> }
             @if (idade?.errors?.['min']) { <p>A idade deve ser um número válido.</p> }
+            @if (idade?.errors?.['max']) { <p>A idade máxima permitida é 15 anos.</p> }
           </div>
         }
       </div>
