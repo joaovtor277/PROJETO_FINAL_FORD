@@ -9,12 +9,21 @@
       </p>
     </div>
 
-    <div class="inspiracao-galeria">
-      <div *ngFor="let imagem of imagensGaleria"
-           class="galeria-item"
-           [ngClass]="imagem.classeCss">
-        <img [src]="imagem.caminho" [alt]="imagem.alt" />
+    <div class="inspiracao-carrossel">
+      <div class="carrossel-container">
+        <div class="carrossel-track" 
+             [style.transform]="'translateX(' + (-indiceAtual * 100) + '%)'">
+          
+          <div *ngFor="let imagem of imagensGaleria" class="carrossel-slide">
+            <img [src]="imagem.caminho" [alt]="imagem.alt" />
+          </div>
+
+        </div>
       </div>
+      
+      <button (click)="slideAnterior()" class="carrossel-botao anterior">&#10094;</button>
+      <button (click)="proximoSlide()" class="carrossel-botao proximo">&#10095;</button>
+
     </div>
   </div>
 </section>
